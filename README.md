@@ -2,6 +2,7 @@
 
 This dataset documents the client's credit balance, and monthly repayment history to predict the if the next month payment will default or not. the original study focused on comparing the predictive accuracy of probability of default among different data mining methods. we will use this dataset to demonstrate using decision tree & random forest as a ML engine to design a credit card approval strategy. 
 
+
 ## Overview
 
 This dataset contains 23 variables and 1 target result. 
