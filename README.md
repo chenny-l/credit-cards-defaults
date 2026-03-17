@@ -7,7 +7,7 @@ This dataset documents the client's credit balance, and monthly repayment histor
 This dataset contains 23 variables and 1 target result. 
 
 
-| Name | Role | Type | Units | Explanation |
+| Name | Role | Type | Units | Description |
 | --- | --- | --- | --- | --- |
 | **ID** | Identifier | Integer | - | Unique ID for each customer. No inherent meaning beyond identification. |
 | **LIMIT_BAL (X1)** | Feature | Integer | NT dollars | Credit limit of the customer’s card. Higher value → bigger credit line. |
