@@ -6,7 +6,6 @@ This dataset documents the client's credit balance, and monthly repayment histor
 
 This dataset contains 23 variables and 1 target result. 
 
-# Credit Card Default Dataset - Feature Description
 
 | Name | Role | Type | Units | Explanation |
 | --- | --- | --- | --- | --- |
