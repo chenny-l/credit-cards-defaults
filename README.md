@@ -54,7 +54,12 @@ We noticed that the dataset is imbalanced, with non-defaults accounting for appr
 
 ## Feature Importance
 
-Although 23 features are not 
+Although 23 features are not too many, and we are likely to include them all in the model, we would like to explore the predictive power of each variable with Random Forest Classifier: 
+
+![pic](visuals/feature_importance.png)
+
+## Model Development & Validation 
+
 
 
 
