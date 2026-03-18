@@ -43,6 +43,11 @@ This dataset contains 23 features and 1 target.
 ## Data Set
 
 The data set for this project is available in [.csv file](https://github.com/chenny-l/credit-cards-defaults/blob/main/datasets/credit_default_clients.csv). 
+The full detailed analysis is available in [jupyter notebook](https://github.com/chenny-l/credit-cards-defaults/blob/main/notebooks/credit_card_default_prediction.ipynb).
+
+## Preliminary Analysis
+
+We noticed that the data is imbalanced at the first glance. The amount of non-defaulters is way 
 
 
 
