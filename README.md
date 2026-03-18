@@ -48,9 +48,13 @@ The full detailed analysis is available in [jupyter notebook](https://github.com
 
 ## Preliminary Analysis
 
-We noticed that the data is imbalanced at the first glance. The amount of non-defaulters is larger than the defaulters. 
+We noticed that the dataset is imbalanced, with non-defaults accounting for approximately 78% and defaults around 22%. This imbalance could bias the logistic regression model, as the majority class may dominate the learning process. We will take this into consideration during modeling later.
 
 ![pic](visuals/proportion.png)
+
+## Feature Importance
+
+Although 23 features are not 
 
 
 
