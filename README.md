@@ -60,6 +60,14 @@ Although 23 features are not too many, and we are likely to include them all in 
 
 ## Model Development & Validation 
 
+We fit Logistic Regression, Decision Tree, and XGBoost models. For Logistic Regression, all features were standardized prior to model training.
+
+![pic](visuals/lr.png) ![pic](visuals/lr_matrix.png) 
+
+![pic](visuals/dt.png) ![pic](visuals/dt_matrix.png) 
+
+
+
 
 
 
