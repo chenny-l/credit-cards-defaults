@@ -104,6 +104,20 @@ Building on the predicted probability of default, we can construct a scorecard t
 
 We then can calculate the default at risk according to this decision. 
 
+## Future Discussion 
+
+- Static prediction horizon: The model predicts only next-month default due to data constraints. In practice, credit risk evolves over time; incorporating time series analysis would enable tracking behavioral trends across risk segments.
+
+- Class imbalance: With defaults at ~22%, the model may be biased toward non-defaults, potentially underestimating high-risk customers.
+
+- Risk threshold: Approval cutoffs should be aligned with business objectives, balancing profitability and risk appetite.
+
+- Model interpretability: More complex models (e.g., XGBoost) can be harder to explain to stakeholders, limiting their practical adoption.
+
+- Monitoring framework: A dashboard tracking customer behavior shifts and macroeconomic indicators (e.g., housing prices, GDP, unemployment) would strengthen ongoing risk management.
+
+- Enhanced risk metrics: Extend beyond Value at Risk by incorporating Expected Loss (EL = PD × LGD × EAD) for a more comprehensive risk assessment.
+
 
 
 
