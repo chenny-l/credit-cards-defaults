@@ -40,3 +40,9 @@ This dataset contains 23 features and 1 target.
 | **PAY_AMT6 (X23)** | Feature | Integer | NT dollars | Amount paid in **April**. |
 | **Y** | Target | Binary | NT dollars | Default payment next month. 0 = No, 1 = yes |
 
+## Data Set
+
+The data set for this project is available in [.csv file](https://github.com/chenny-l/credit-cards-defaults/blob/main/datasets/credit_default_clients.csv). 
+
+
+
