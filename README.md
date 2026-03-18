@@ -2,7 +2,7 @@
 
 This project explores a dataset of 30,000 credit card clients from a retail bank in Taiwan, combining customer profiles, credit limits, and detailed repayment behavior in a span of 6 months. Using 23 features, including demographics, payment history, bill statements, and prior repayments, we model the probability of default for the next month. 
 
-Building on prior research focused on predictive accuracy, this project compares **Logistic Regression**, **Decision Tree**, and **XGBoost** using AUC and confusion matrices to evaluate how well each model distinguishes between good and bad customers, with particular attention to false negatives (missed defaulters).
+Building on prior research focused on predictive accuracy (link [here](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)), this project compares **Logistic Regression**, **Decision Tree**, and **XGBoost** using AUC and confusion matrices to evaluate how well each model distinguishes between good and bad customers, with particular attention to false negatives (missed defaulters).
 
 Based on model performance and interpretability, a Decision Tree is selected to drive business decisions. The model outputs are then translated into a practical credit strategy, including risk-based approval thresholds, quantification of value at risk, and assessment of lost opportunity from declined but creditworthy applicants.
 
@@ -40,7 +40,3 @@ This dataset contains 23 features and 1 target.
 | **PAY_AMT6 (X23)** | Feature | Integer | NT dollars | Amount paid in **April**. |
 | **Y** | Target | Binary | NT dollars | Default payment next month. 0 = No, 1 = yes |
 
-
-
-
-oritinal dataset here: https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients 
