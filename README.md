@@ -50,7 +50,7 @@ The full detailed analysis is available in [jupyter notebook](https://github.com
 
 We noticed that the data is imbalanced at the first glance. The amount of non-defaulters is larger than the defaulters. 
 
-<img width="405" height="180" alt="image" src="https://github.com/user-attachments/assets/9f25172b-2d61-40f3-86ec-32bc16f0a8dd" />
+![pic](visuals/proportion.png)
 
 
 
