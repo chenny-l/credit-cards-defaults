@@ -9,7 +9,7 @@ Based on model performance and interpretability, a Decision Tree is selected to 
 
 ## Overview
 
-This dataset contains 23 variables and 1 target. 
+This dataset contains 23 features and 1 target. 
 
 
 | Name | Role | Type | Units | Description |
