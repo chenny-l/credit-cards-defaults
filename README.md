@@ -66,6 +66,48 @@ We fit Logistic Regression, Decision Tree, and XGBoost models. For Logistic Regr
 
 ![pic](visuals/dt.png) ![pic](visuals/dt_matrix.png) 
 
+We compared models using AUC and false negative rate. The Decision Tree outperformed Logistic Regression, leading to a lower false negative rate (0.29 vs. 0.33) and a higher AUC (0.77 vs. 0.73).
+
+## Credit Card Strategy 
+
+We define the ***risk thresholds** as follows: 
+
+
+| Risk Tier    | Probability of Default | Action                                      |
+| ------------ | ---------------------- | ------------------------------------------- |
+| Low risk     | < 20%             | Approve automatically                       |
+| Medium risk  | 20-50%              | Require second review / manual verification |
+| High risk    | 50-70%               | Offer lower credit limit          |
+| Extreme risk | > 70%               | Decline automatically                       |
+
+
+The target `default_payment_next_month` for 30,000 customers are known. We will use decision trees to estimate the probability of default for each customer. By comparing predictions to the actual outcomes, we can quantify:
+- **Risk**: How many approved customers actually defaulted, and hence how much loan value is at risk? 
+
+- **Lost Opportunity**: how many declined customers would have been safe?
+
+We added a new column `action` to the dataset, applying Decision Tree predictions with predefined risk thresholds to simulate real-world approval decisions:
+
+![pic](visuals/res.png)
+
+If we plot the default rate by action, we can see the default rate is highest in the `decline` action, which is what we would like to see. The second highest is `Offering lower credit limit`, and then `Second review`, the lowest default rate is in `approve` action. This result aligns with the ordering of the risk thresholds, as expected.
+
+![pic](visuals/res1.png)
+
+We also calculated the value at risk and lost opportunity in the [notebook](https://github.com/chenny-l/credit-cards-defaults/blob/main/notebooks/credit_card_default_prediction.ipynb). 
+
+Risk comes from the exposure from customers who were approved but defaulted, while lost opportunity represents the value of credit declined for customers who would not have defaulted.
+
+Building on the predicted probability of default, we can construct a scorecard that maps risk into score bands, identifying approval or decline decisions based on each customer’s score band.
+
+![pic](visuals/res2.png)
+
+We then can calculate the default at risk according to this decision. 
+
+
+
+
+
 
 
 
