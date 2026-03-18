@@ -1,11 +1,15 @@
-# credit-cards-defaults
+# Credit Card Defaults Prediction
 
-This dataset documents the client's credit balance, and monthly repayment history to predict the if the next month payment will default or not. the original study focused on comparing the predictive accuracy of probability of default among different data mining methods. we will use this dataset to demonstrate using decision tree & random forest as a ML engine to design a credit card approval strategy. 
+This project explores a dataset of 30,000 credit card clients from a retail bank in Taiwan, combining customer profiles, credit limits, and detailed repayment behavior in a span of 6 months. Using 23 features, including demographics, payment history, bill statements, and prior repayments, we model the probability of default for the next month. 
+
+Building on prior research focused on predictive accuracy, this project compares **Logistic Regression**, **Decision Tree**, and **XGBoost** using AUC and confusion matrices to evaluate how well each model distinguishes between good and bad customers, with particular attention to false negatives (missed defaulters).
+
+Based on model performance and interpretability, a Decision Tree is selected to drive business decisions. The model outputs are then translated into a practical credit strategy, including risk-based approval thresholds, quantification of value at risk, and assessment of lost opportunity from declined but creditworthy applicants.
 
 
 ## Overview
 
-This dataset contains 23 variables and 1 target result. 
+This dataset contains 23 variables and 1 target. 
 
 
 | Name | Role | Type | Units | Description |
