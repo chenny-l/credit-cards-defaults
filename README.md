@@ -106,6 +106,8 @@ We then can calculate the default at risk according to this decision.
 
 ## Future Discussion 
 
+We would like to mention a few limitations for future improvements:
+
 - Static prediction horizon: The model predicts only next-month default due to data constraints. In practice, credit risk evolves over time; incorporating time series analysis would enable tracking behavioral trends across risk segments.
 
 - Class imbalance: With defaults at ~22%, the model may be biased toward non-defaults, potentially underestimating high-risk customers.
