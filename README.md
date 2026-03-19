@@ -20,7 +20,7 @@ This dataset contains 23 features and 1 target.
 | **EDUCATION (X3)** | Feature | Integer | - | Education level: typically `1 = graduate school`, `2 = university`, `3 = high school`, `4 = others`. |
 | **MARRIAGE (X4)** | Feature | Integer | - | Marital status: `1 = married`, `2 = single`, `3 = others`. |
 | **AGE (X5)** | Feature | Integer | years | Age of the customer. |
-| **PAY_0 (X6)** | Feature | Integer | - | Repayment status for **September** (latest month). Codes: `-1 = pay duly`, `0 = use revolving credit, paid in full`, `1 = payment delay 1 month`, `2 = payment delay 2 months`, etc. |
+| **PAY_0 (X6)** | Feature | Integer | - | Repayment status for **September** (latest month). Codes: `-1 = pay duly`, `0 = use revolving credit, paid in full`, `1 = payment delay 1 month`, `2 = payment delay 2 months`, etc. `9 = payment delay 9 months and above`|
 | **PAY_2 (X7)** | Feature | Integer | - | Repayment status for **August** (one month earlier). Same coding as PAY_0. |
 | **PAY_3 (X8)** | Feature | Integer | - | Repayment status for **July**. |
 | **PAY_4 (X9)** | Feature | Integer | - | Repayment status for **June**. |
