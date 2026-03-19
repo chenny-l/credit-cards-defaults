@@ -104,22 +104,6 @@ Building on the predicted probability of default, we can construct a scorecard t
 
 We then can calculate the default at risk according to this decision. 
 
-## Future Discussion 
-
-We would like to mention a few limitations for future improvements:
-
-- Static prediction horizon: The model predicts only next-month default due to data constraints. In practice, credit risk evolves over time; incorporating time series analysis would enable tracking behavioral trends across risk segments.
-
-- Class imbalance: With defaults at ~22%, the model may be biased toward non-defaults, potentially underestimating high-risk customers.
-
-- Risk threshold: Approval cutoffs should be aligned with business objectives, balancing profitability and risk appetite.
-
-- Model interpretability: More complex models (e.g., XGBoost) can be harder to explain to stakeholders, limiting their practical adoption.
-
-- Monitoring framework: A dashboard tracking customer behavior shifts and macroeconomic indicators (e.g., housing prices, GDP, unemployment) would strengthen ongoing risk management.
-
-- Enhanced risk metrics: Extend beyond Value at Risk by incorporating Expected Loss (EL = PD × LGD × EAD) for a more comprehensive risk assessment.
-
 ## Stress Testing
 
 We want to consider a few additional features before stress testing: 
@@ -141,6 +125,38 @@ Before stress testing, we developed some signals as following:
 - **Balance growth** = bill amount (in September) - bill amount (in September)
 
   Detects if a customer's debt is increasing / decreaing from the past 6 months. Positive value indicates that the customer is spending more and not paying enough; negative value means the customer spending less or paying down the debt, suggesting healthy financial behaviour.
+
+One of the scenaios that could happen is **Inflation**: when encountering inflation, prices are higher and the purchasing value of money will fall. It likely causes customers rely more heavily on the credit card, and slow the repayment behaviour. We set the **credit utilization** to be up about 20%, **payment amount** down 10% and takes about 1 month longer for a customer to fully clear a balance.
+
+![pic](visuals/res3.png)
+
+![pic](visuals/res4.png)
+
+
+And with longer payment cycle, we fit the decision tree model to the stressed data. 
+
+![pic](visuals/res5.png)
+
+The Decision Tree model under the stressed scenario correctly identified 76% of good customers and 62% of defaulters, compared to the baseline model, which captured 70% of good customers and 71% of defaulters. While the stressed model performs better at identifying good customers, it misses some defaulters, misclassifying them as low-risk. As shown in the following bar graph, the baseline model predicts higher PD values overall, whereas the stressed model somewhat unexpectedly predicted 568 additional non-defaulters as low-risk.
+
+![pic](visuals/res6.png)
+
+## Future Discussion 
+
+We would like to mention a few limitations for future improvements:
+
+- Static prediction horizon: The model predicts only next-month default due to data constraints. In practice, credit risk evolves over time; incorporating time series analysis would enable tracking behavioral trends across risk segments.
+
+- Class imbalance: With defaults at ~22%, the model may be biased toward non-defaults, potentially underestimating high-risk customers.
+
+- Risk threshold: Approval cutoffs should be aligned with business objectives, balancing profitability and risk appetite.
+
+- Model interpretability: More complex models (e.g., XGBoost) can be harder to explain to stakeholders, limiting their practical adoption.
+
+- Monitoring framework: A dashboard tracking customer behavior shifts and macroeconomic indicators (e.g., housing prices, GDP, unemployment) would strengthen ongoing risk management.
+
+- Enhanced risk metrics: Extend beyond Value at Risk by incorporating Expected Loss (EL = PD × LGD × EAD) for a more comprehensive risk assessment.
+
 
 
 
