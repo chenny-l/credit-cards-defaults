@@ -1,4 +1,4 @@
-# Credit Card Defaults Prediction
+# Credit Card Defaults Prediction & Stress Testing
 
 This project explores a dataset of 30,000 credit card clients from a retail bank in Taiwan, combining customer profiles, credit limits, and detailed repayment behavior in a span of 6 months. Using 23 features, including demographics, payment history, bill statements, and prior repayments, we model the probability of default for the next month. 
 
