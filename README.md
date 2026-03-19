@@ -120,6 +120,30 @@ We would like to mention a few limitations for future improvements:
 
 - Enhanced risk metrics: Extend beyond Value at Risk by incorporating Expected Loss (EL = PD × LGD × EAD) for a more comprehensive risk assessment.
 
+## Stress Testing
+
+We want to consider a few additional features before stress testing: 
+
+Before stress testing, we developed some signals as following:
+
+- **Credit unitilization** = bill amount / total credit balance
+
+  High utilization could mean more financial stress.
+
+- **Payment ratio** = payment amount / bill amount
+
+  This signals the customer's ability to pay.
+
+- **Avg Deliquency score** = mean(PAY_0, PAY_2, PAY_3, PAY_4, PAY_5, PAY_6)
+
+  This calculates the average length of deliquency for the customer in the 6 months.
+
+- **Balance growth** = bill amount (in September) - bill amount (in September)
+
+  Detects if a customer's debt is increasing / decreaing from the past 6 months. Positive value indicates that the customer is spending more and not paying enough; negative value means the customer spending less or paying down the debt, suggesting healthy financial behaviour.
+
+
+
 
 
 
